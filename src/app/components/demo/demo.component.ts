@@ -22,6 +22,7 @@ export class DemoComponent implements OnInit {
   tokenEncrypt: string;
   tokenDecrypt: string;
   tokenCookieDecrypt: string;
+  tokenSessionDecrypt:string;
 
   ngOnInit() {
 
@@ -31,6 +32,7 @@ export class DemoComponent implements OnInit {
     this.tokenEncrypt = this.securityService.Encrypt(this.token, this.securityService.KeyApp, false);
     this.tokenDecrypt = this.securityService.Decrypt(this.tokenEncrypt, this.securityService.KeyApp);
     this.securityService.persistenceServiceSet('token', this.token, { type: StorageType.SESSION });
+    this.tokenSessionDecrypt=this.securityService.persistenceServiceGet('token',{ type: StorageType.SESSION })
   }
 
   tryDemoNormal() {
