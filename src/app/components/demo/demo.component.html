@@ -1,0 +1,29 @@
+<p>
+  Seguridad FrontEnd!!</p>
+
+<div>
+  <label>Token: 
+    <input [(ngModel)]="token" placeholder="name">
+  </label>
+  <br><br>
+  <button  class="btn btn-primary" type="button" (click)="tryDemoNormal()">Try me normal</button> 
+  <button  class="btn btn-primary" type="button" (click)="tryDemo()">Try me</button> 
+  <button  class="btn btn-primary" type="button" (click)="SetCookie()">Try me in Cookie</button> 
+  <button  class="btn btn-primary" type="button" (click)="clean()">Clean</button> 
+  
+  <br><br><br>
+  <label>Token Encrypt:
+    <div>{{tokenEncrypt}}</div>
+  </label>
+  <br>
+  <br>
+  <br>
+  <label>Token Decrypt:
+    <div>{{tokenDecrypt}}</div>
+  </label>
+  <br>
+  <br>
+  <label>Token Cookie Decrypt:
+    <div>{{tokenCookieDecrypt}}</div>
+  </label>
+</div>
